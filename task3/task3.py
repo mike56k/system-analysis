@@ -8,12 +8,7 @@ def task(csvString):
   for row in reader:
     input.append(row)
   
-  out = []
-  r1 = []
-  r2 = []
-  r3 = []
-  r4 = []
-  r5 = []
+  r1, r2, r3, r4, r5 = [], [], [], [], []
 
   def direct(index, storage):
     for row in input:
@@ -37,13 +32,7 @@ def task(csvString):
         if row[1] not in r5 and nextRow[0] == row[0] and nextRow != row:
           r5.append(row[1])
 
-  out.append(r1)
-  out.append(r2)
-  out.append(r3)
-  out.append(r4)
-  out.append(r5)
-
-  return out
+  return [r1, r2, r3, r4, r5]
 
 with open('graph.csv') as file:
   csvString = file.read()
