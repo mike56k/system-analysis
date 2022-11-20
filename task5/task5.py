@@ -1,7 +1,7 @@
 import json
 import numpy as np  
 
-def task5(rankA: str, rankB:str) -> str:
+def task(rankA: str, rankB:str) -> str:
     rankingA = json.loads(rankA)
     rankingB = json.loads(rankB)
     def rank_len(ranking) -> int:
@@ -43,5 +43,5 @@ def task5(rankA: str, rankB:str) -> str:
 
     return json.dumps(conflicts)
 
-print(task5("[\"1\", [\"2\",\"3\"],\"4\", [\"5\", \"6\", \"7\"], \"8\", \"9\", \"10\"]",
+print(task("[\"1\", [\"2\",\"3\"],\"4\", [\"5\", \"6\", \"7\"], \"8\", \"9\", \"10\"]",
             "[[\"1\",\"2\"], [\"3\",\"4\",\"5\"], \"6\", \"7\", \"9\", [\"8\",\"10\"]]"))
