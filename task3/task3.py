@@ -33,8 +33,3 @@ def task(csvString):
           r5.append(row[1])
 
   return [r1, r2, r3, r4, r5]
-
-with open('graph.csv') as file:
-  csvString = file.read()
-  result = task(csvString)
-  print(result)

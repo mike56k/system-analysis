@@ -50,8 +50,3 @@ def task(csvString):
                 enthropy += (results[j][i] / (len(vertices) - 1)) * math.log(results[j][i] / (len(vertices) - 1), 2)
 
     return -enthropy
-
-with open('data.csv') as file:
-    csvString = file.read()
-    result = task(csvString)
-    print(result)
