@@ -29,4 +29,4 @@ def task(input_matrix_json: str):
         y = np.dot(mean_values, k0)
         l = np.dot(np.ones(len(y)), y)
         k1 = np.dot(1/l, y)
-    return [round(el, 3) for el in k1]
+    return json.dumps([round(el, 3) for el in k1])
